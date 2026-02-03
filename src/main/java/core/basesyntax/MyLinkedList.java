@@ -7,18 +7,6 @@ public class MyLinkedList<T> implements MyLinkedListInterface<T> {
     private Node tail;
     private int size;
 
-    private class Node {
-        private T item;
-        private Node next;
-        private Node prev;
-
-        Node(T item, Node next, Node prev) {
-            this.item = item;
-            this.next = next;
-            this.prev = prev;
-        }
-    }
-
     public MyLinkedList() {
         head = null;
         tail = null;
@@ -156,5 +144,17 @@ public class MyLinkedList<T> implements MyLinkedListInterface<T> {
         }
 
         size--;
+    }
+
+    private class Node {
+        T item;
+        Node next;
+        Node prev;
+
+        Node(T item, Node next, Node prev) {
+            this.item = item;
+            this.next = next;
+            this.prev = prev;
+        }
     }
 }
