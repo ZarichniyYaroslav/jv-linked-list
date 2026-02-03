@@ -147,9 +147,9 @@ public class MyLinkedList<T> implements MyLinkedListInterface<T> {
     }
 
     private class Node {
-        T item;
-        Node next;
-        Node prev;
+        private T item;
+        private Node next;
+        private Node prev;
 
         Node(T item, Node next, Node prev) {
             this.item = item;
